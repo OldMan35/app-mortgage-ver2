@@ -10,7 +10,6 @@
   <artifactId>app-mortgage-ver2</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-
   <dependencies>
     <dependency>
       <groupId>org.springframework</groupId>
