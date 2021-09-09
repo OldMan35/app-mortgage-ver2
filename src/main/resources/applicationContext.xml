@@ -10,7 +10,8 @@
 
     <bean id="mortgageClients"
           class="org.example.model.MortgageClients">
-        <constructor-arg value="Костя"/>
     </bean>
+
+
 
 </beans>
