@@ -15,8 +15,14 @@
 
     <mvc:annotation-driven/>
 
-<!--    <bean id="mortgageClients"-->
-<!--          class="org.example.model.MortgageClients">-->
-<!--    </bean>-->
+    <bean id="mortgageRepository"
+          class="org.example.repository.MortgageRepository" abstract="true">
+    </bean>
+    <bean id="mortgageController"
+          class="org.example.controller.MortgageController">
+    </bean>
+    <bean id="mortgageService"
+          class="org.example.service.MortgageService">
+    </bean>
 
 </beans>
