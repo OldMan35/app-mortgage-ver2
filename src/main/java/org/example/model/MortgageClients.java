@@ -12,7 +12,7 @@ import javax.persistence.Id;
 @Entity
 public class MortgageClients {
 
-    @Id
+   @Id
     private int id;
 
     private String nameOfBuyers;
