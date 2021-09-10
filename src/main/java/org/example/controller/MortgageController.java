@@ -16,7 +16,7 @@ public class MortgageController {
 
     private final MortgageService mortgageService;
 
-    @Autowired
+//    @Autowired
     public MortgageController(MortgageService mortgageService) {
         this.mortgageService = mortgageService;
     }

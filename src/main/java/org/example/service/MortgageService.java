@@ -12,7 +12,7 @@ public class MortgageService {
 
     private final MortgageRepository mortgageRepository;
 
-    @Autowired
+//    @Autowired
     public MortgageService(MortgageRepository mortgageRepository) {
         this.mortgageRepository = mortgageRepository;
     }
@@ -24,4 +24,6 @@ public class MortgageService {
     public void create(MortgageClients mortgageClients) {
         mortgageRepository.save(mortgageClients);
     }
+
+
 }
