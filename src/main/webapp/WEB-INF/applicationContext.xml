@@ -12,17 +12,7 @@
         http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
     <context:component-scan base-package="org.example"/>
-
     <mvc:annotation-driven/>
 
-    <bean id="mortgageRepository"
-          class="org.example.repository.MortgageRepository" abstract="true">
-    </bean>
-    <bean id="mortgageController"
-          class="org.example.controller.MortgageController">
-    </bean>
-    <bean id="mortgageService"
-          class="org.example.service.MortgageService">
-    </bean>
 
 </beans>

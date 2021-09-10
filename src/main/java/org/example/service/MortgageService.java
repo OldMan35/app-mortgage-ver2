@@ -1,8 +1,8 @@
 package org.example.service;
 
-import org.example.repository.MortgageRepository;
+import org.springframework.stereotype.Service;
 
-
-public class MortgageService implements MortgageRepository {
+@Service
+public class MortgageService {
 
 }
