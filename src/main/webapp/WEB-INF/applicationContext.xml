@@ -18,12 +18,11 @@
     <bean id="dataSource"
           class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="org.h2.Driver"/>
-        <property name="url" value="jdbc:h2:mem:mortgage_clients"/>
+        <property name="url" value="jdbc:h2:mem:mortgage_clients;DB_CLOSE_DELAY=-1"/>
         <property name="username" value="sa"/>
         <property name="password" value="password"/>
     </bean>
 
-    <!--    spring.datasource.url=jdbc:h2:mem:mortgage_clients-->
 
     <bean id="entityManagerFactoryBean"
           class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
@@ -35,7 +34,7 @@
         </property>
         <property name="jpaProperties">
             <props>
-                <prop key="hibernate.hbm2ddl.auto">update</prop>
+                <prop key="hibernate.hbm2ddl.auto">create</prop>
                 <prop key="hibernate.dialect">org.hibernate.dialect.H2Dialect</prop>
             </props>
         </property>

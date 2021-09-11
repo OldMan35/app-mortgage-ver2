@@ -16,7 +16,7 @@ public class MortgageController {
 
     private final MortgageService mortgageService;
 
-//    @Autowired
+    @Autowired
     public MortgageController(MortgageService mortgageService) {
         this.mortgageService = mortgageService;
     }
@@ -26,20 +26,20 @@ public class MortgageController {
         return new ResponseEntity<String>("hello",HttpStatus.OK);
     }
 
-//    @GetMapping(value = "/get-all")
-//    public ResponseEntity<?> getAll() {
-//        List<MortgageClients> mortgageClientsList = mortgageService.getAll();
-//        if (mortgageClientsList.size() != 0) {
-//           return ResponseEntity.ok().body(mortgageClientsList);
-//       } else {
-//            return new ResponseEntity<String>("Заявок нет", HttpStatus.OK);
-//       }
-//    }
-//
-//    @PostMapping(value = "/create")
-//    public ResponseEntity<?> createMortgageClients(@RequestBody MortgageClients mortgageClients) {
-//     mortgageService.create(mortgageClients);
-//        return new ResponseEntity<String>("Заявка создана", HttpStatus.CREATED);
-//    }
+    @GetMapping(value = "/get-all")
+    public ResponseEntity<?> getAll() {
+        List<MortgageClients> mortgageClientsList = mortgageService.getAll();
+        if (mortgageClientsList.size() != 0) {
+           return ResponseEntity.ok().body(mortgageClientsList);
+       } else {
+            return new ResponseEntity<String>("Заявок нет", HttpStatus.OK);
+       }
+    }
+
+    @PostMapping(value = "/create")
+    public ResponseEntity<?> createMortgageClients(@RequestBody MortgageClients mortgageClients) {
+     mortgageService.create(mortgageClients);
+        return new ResponseEntity<String>("Заявка создана", HttpStatus.CREATED);
+    }
 }
 
