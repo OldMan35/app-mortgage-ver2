@@ -2,9 +2,7 @@ package org.example.model;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Getter
 @Setter
@@ -14,7 +12,8 @@ import javax.persistence.Table;
 @Table(name = "mortgage")
 public class MortgageClients {
 
-   @Id
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     private String nameOfBuyers;
