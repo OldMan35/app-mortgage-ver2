@@ -2,17 +2,17 @@ package org.example.model;
 
 import lombok.*;
 
-//import javax.persistence.Entity;
-//import javax.persistence.Id;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-//@Entity
+@Entity
 public class MortgageClients {
 
-//   @Id
+   @Id
     private int id;
 
     private String nameOfBuyers;
