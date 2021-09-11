@@ -2,11 +2,13 @@ package org.example.model;
 
 import com.sun.istack.NotNull;
 import lombok.*;
+import org.example.validation.InnValidation;
 
 import javax.persistence.*;
 
 @Getter
 @Setter
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
@@ -50,7 +52,7 @@ public class MortgageClients {
     private long costObject;
 
     @NotNull
-//    @InnValidation
+    @InnValidation
     @Column(name = "innofbuyers")
     private String innOfBuyers;
 
@@ -68,7 +70,7 @@ public class MortgageClients {
 
     @NotNull
     @Column(name = "innind")
-//    @InnValidation
+    @InnValidation
     private String innInd;
 
     @NotNull
@@ -77,7 +79,7 @@ public class MortgageClients {
 
     @NotNull
     @Column(name = "innorg")
-//    @InnValidation
+    @InnValidation
     private String innOrg;
 
     @NotNull
