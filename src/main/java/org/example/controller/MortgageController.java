@@ -33,14 +33,14 @@ public class MortgageController {
         if (mortgageClientsList.size() != 0) {
            return ResponseEntity.ok().body(mortgageClientsList);
        } else {
-            return new ResponseEntity<String>("Заявок нет", HttpStatus.OK);
+            return new ResponseEntity<String>("No request", HttpStatus.OK);
        }
     }
 
     @PostMapping(value = "/create", consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> createMortgageClients(@RequestBody MortgageClients mortgageClients) {
      mortgageService.create(mortgageClients);
-        return new ResponseEntity<String>("Заявка создана", HttpStatus.CREATED);
+        return new ResponseEntity<String>("Request created", HttpStatus.CREATED);
     }
 }
 
