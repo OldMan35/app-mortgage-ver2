@@ -26,7 +26,7 @@ public class MortgageController {
 
     @GetMapping(value = "/hello")
     public ResponseEntity<String> hello (){
-        return new ResponseEntity<String>("hello",HttpStatus.OK);
+        return new ResponseEntity<>("привет",HttpStatus.OK);
     }
 
     @GetMapping(value = "/get-all")
@@ -35,14 +35,14 @@ public class MortgageController {
         if (mortgageClientsList.size() != 0) {
            return ResponseEntity.ok().body(mortgageClientsList);
        } else {
-            return new ResponseEntity<String>("No request", HttpStatus.OK);
+            return new ResponseEntity<>("No request", HttpStatus.OK);
        }
     }
 
     @PostMapping(value = "/create", consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> createMortgageClients(@RequestBody MortgageClients mortgageClients) {
      mortgageService.create(mortgageClients);
-        return new ResponseEntity<String>("Request created", HttpStatus.CREATED);
+        return new ResponseEntity<>("Request created", HttpStatus.CREATED);
     }
 }
 
