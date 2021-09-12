@@ -45,6 +45,7 @@ public class MortgageClients {
     private long costObject;
 
     @NotNull
+    @InnValidation
     private String innOfBuyers;
 
     @NotNull
