@@ -9,7 +9,6 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -30,20 +29,20 @@ public class MortgageController {
         return new ResponseEntity<>("Hello!",HttpStatus.OK);
     }
 
-    @GetMapping(value = "/get-all")
+    @GetMapping(value = "/get-all", produces = "text/plain;charset=UTF-8")
     public ResponseEntity<?> getAll() {
         List<MortgageClients> mortgageClientsList = mortgageService.getAll();
         if (mortgageClientsList.size() != 0) {
-           return ResponseEntity.ok().body(mortgageClientsList);
+           return ResponseEntity.ok().contentType(MediaType.APPLICATION_JSON).body(mortgageClientsList);
        } else {
-            return new ResponseEntity<>("No request", HttpStatus.OK);
+            return new ResponseEntity<>("Заявок нет", HttpStatus.OK);
        }
     }
 
-    @PostMapping(value = "/create", consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(value = "/create", consumes = MediaType.APPLICATION_JSON_VALUE, produces = "text/plain;charset=UTF-8")
     public ResponseEntity<?> createMortgageClients(@RequestBody MortgageClients mortgageClients) {
      mortgageService.create(mortgageClients);
-        return new ResponseEntity<>("Request created", HttpStatus.CREATED);
+        return new ResponseEntity<>("Заявка создана", HttpStatus.CREATED);
     }
 }
 
