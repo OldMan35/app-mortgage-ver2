@@ -1,7 +1,7 @@
 package org.example.model;
 
 
-import jakarta.validation.constraints.NotNull;
+import javax.validation.constraints.NotNull;
 import lombok.*;
 
 import javax.persistence.*;

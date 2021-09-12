@@ -13,7 +13,9 @@
     <context:component-scan base-package="org.example"/>
     <jpa:repositories base-package="org.example.repository"
                       entity-manager-factory-ref="entityManagerFactoryBean"/>
-    <mvc:annotation-driven/>
+    <mvc:annotation-driven validator="myBeansValidator"/>
+
+    <bean id="myBeansValidator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean"/>
 
     <bean id="dataSource"
           class="org.springframework.jdbc.datasource.DriverManagerDataSource">
@@ -22,6 +24,7 @@
         <property name="username" value="sa"/>
         <property name="password" value="password"/>
     </bean>
+
 
     <bean id="entityManagerFactoryBean"
           class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">

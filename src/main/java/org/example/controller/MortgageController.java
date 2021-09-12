@@ -1,7 +1,6 @@
 package org.example.controller;
 
 
-import org.example.controller.dto.MortgageClientsDTO;
 import org.example.model.MortgageClients;
 import org.example.service.MortgageService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,14 +10,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
 
 @Controller
-@Validated
 @RequestMapping(value = "/mortgage")
 public class MortgageController {
 
@@ -45,11 +42,11 @@ public class MortgageController {
     }
 
     @PostMapping(value = "/create", consumes = MediaType.APPLICATION_JSON_VALUE, produces = "text/plain;charset=UTF-8")
-    public ResponseEntity<?> createMortgageClients(@Valid @RequestBody MortgageClientsDTO mortgageClients, BindingResult result) {
+    public ResponseEntity<?> createMortgageClients(@Valid @RequestBody MortgageClients mortgageClients, BindingResult result) {
         if (result.hasErrors()) {
             return new ResponseEntity<>("Неверно введены данные", HttpStatus.BAD_REQUEST);
         }
-//        mortgageService.create(mortgageClients);
+        mortgageService.create(mortgageClients);
         return new ResponseEntity<>("Заявка создана", HttpStatus.CREATED);
     }
 }
