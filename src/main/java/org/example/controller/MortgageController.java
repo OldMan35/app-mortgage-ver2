@@ -9,10 +9,8 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
 import java.util.List;
 
 @Controller
@@ -37,10 +35,7 @@ public class MortgageController {
     }
 
     @PostMapping(value = "/create", consumes = MediaType.APPLICATION_JSON_VALUE, produces = "text/plain;charset=UTF-8")
-    public ResponseEntity<?> createMortgageClients(@Valid @RequestBody MortgageClients mortgageClients, BindingResult result) {
-        if (result.hasErrors()) {
-            return new ResponseEntity<>("Неверно введены данные", HttpStatus.BAD_REQUEST);
-        }
+    public ResponseEntity<?> createMortgageClients(@RequestBody MortgageClients mortgageClients) {
         mortgageService.create(mortgageClients);
         return new ResponseEntity<>("Заявка создана", HttpStatus.CREATED);
     }
