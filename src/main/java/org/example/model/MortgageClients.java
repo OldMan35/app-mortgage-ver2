@@ -12,7 +12,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "mortgage")
+//@Table(name = "mortgage")
 public class MortgageClients {
 
     @Id
@@ -20,70 +20,70 @@ public class MortgageClients {
     private int id;
 
     @NotNull
-    @Column(name = "nameofbuyers")
+//    @Column(name = "nameofbuyers")
     private String nameOfBuyers;
 
     @NotNull
-    @Column(name = "patronymicofbuyers")
+//    @Column(name = "patronymicofbuyers")
     private String patronymicOfBuyers;
 
     @NotNull
-    @Column(name = "surnameofbuyers")
+    //  @Column(name = "surnameofbuyers")
     private String surnameOfBuyers;
 
     @NotNull
-    @Column(name = "phonenumberofbuyers")
+    //  @Column(name = "phonenumberofbuyers")
     private String phoneNumberOfBuyers;
 
     @NotNull
-    @Column(name = "loanamount")
+    //  @Column(name = "loanamount")
     private long loanAmount;
 
     @NotNull
-    @Column(name = "loanterm")
+    //   @Column(name = "loanterm")
     private int loanTerm;
 
     @NotNull
-    @Column(name = "estateobject")
+    //  @Column(name = "estateobject")
     private String estateObject;
 
     @NotNull
-    @Column(name = "costobject")
+    //   @Column(name = "costobject")
     private long costObject;
 
     @NotNull
     @InnValidation
-    @Column(name = "innofbuyers")
+    //  @Column(name = "innofbuyers")
     private String innOfBuyers;
 
     @NotNull
-    @Column(name = "nameofsellers")
+    //  @Column(name = "nameofsellers")
     private String nameOfSellers;
 
     @NotNull
-    @Column(name = "patronymicofsellers")
+    //  @Column(name = "patronymicofsellers")
     private String patronymicOfSellers;
 
     @NotNull
-    @Column(name = "surnameofsellers")
+    //   @Column(name = "surnameofsellers")
     private String surnameOfSellers;
 
     @NotNull
-    @Column(name = "innind")
+    //   @Column(name = "innind")
     @InnValidation
     private String innInd;
 
     @NotNull
-    @Column(name = "nameorganization")
+    //   @Column(name = "nameorganization")
     private String nameOrganization;
 
     @NotNull
-    @Column(name = "innorg")
+    //  @Column(name = "innorg")
     @InnValidation
     private String innOrg;
 
     @NotNull
-    @Column(name = "ownrights")
+    //  @Column(name = "ownrights")
     private String ownRights;
 }
 
