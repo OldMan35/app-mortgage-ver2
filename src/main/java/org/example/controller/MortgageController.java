@@ -26,11 +26,6 @@ public class MortgageController {
         this.mortgageService = mortgageService;
     }
 
-    @GetMapping(value = "/hello")
-    public ResponseEntity<String> hello() {
-        return new ResponseEntity<>("Hello!", HttpStatus.OK);
-    }
-
     @GetMapping(value = "/get-all", produces = "text/plain;charset=UTF-8")
     public ResponseEntity<?> getAll() {
         List<MortgageClients> mortgageClientsList = mortgageService.getAll();
