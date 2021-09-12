@@ -26,7 +26,7 @@ public class MortgageController {
 
     @GetMapping(value = "/hello")
     public ResponseEntity<String> hello (){
-        return new ResponseEntity<>("привет",HttpStatus.OK);
+        return new ResponseEntity<>("Hello!",HttpStatus.OK);
     }
 
     @GetMapping(value = "/get-all")
