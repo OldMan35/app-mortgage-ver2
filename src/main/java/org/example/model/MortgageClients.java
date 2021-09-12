@@ -20,7 +20,7 @@ public class MortgageClients {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @NotNull (message = "Поле обязательно для заполнения")
+    @NotNull //(message = "Поле обязательно для заполнения")
     private String nameOfBuyers;
 
     @NotNull (message = "Поле обязательно для заполнения")
