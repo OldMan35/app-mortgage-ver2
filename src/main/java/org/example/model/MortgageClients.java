@@ -20,55 +20,55 @@ public class MortgageClients {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @NotNull
+    @NotNull (message = "Поле обязательно для заполнения")
     private String nameOfBuyers;
 
-    @NotNull
+    @NotNull (message = "Поле обязательно для заполнения")
     private String patronymicOfBuyers;
 
-    @NotNull
+    @NotNull (message = "Поле обязательно для заполнения")
     private String surnameOfBuyers;
 
-    @NotNull
+    @NotNull(message = "Поле обязательно для заполнения")
     private String phoneNumberOfBuyers;
 
-    @NotNull
+    @NotNull(message = "Поле обязательно для заполнения")
     private long loanAmount;
 
-    @NotNull
+    @NotNull(message = "Поле обязательно для заполнения")
     private int loanTerm;
 
-    @NotNull
+    @NotNull(message = "Поле обязательно для заполнения")
     private String estateObject;
 
-    @NotNull
+    @NotNull(message = "Поле обязательно для заполнения")
     private long costObject;
 
-    @NotNull
+    @NotNull(message = "Поле обязательно для заполнения")
     @InnValidation
     private String innOfBuyers;
 
-    @NotNull
+    @NotNull(message = "Поле обязательно для заполнения")
     private String nameOfSellers;
 
-    @NotNull
+    @NotNull(message = "Поле обязательно для заполнения")
     private String patronymicOfSellers;
 
-    @NotNull
+    @NotNull(message = "Поле обязательно для заполнения")
     private String surnameOfSellers;
 
-    @NotNull
+    @NotNull(message = "Поле обязательно для заполнения")
     @InnValidation
     private String innInd;
 
-    @NotNull
+    @NotNull(message = "Поле обязательно для заполнения")
     private String nameOrganization;
 
-    @NotNull
+    @NotNull(message = "Поле обязательно для заполнения")
     @InnValidation
     private String innOrg;
 
-    @NotNull
+    @NotNull(message = "Поле обязательно для заполнения")
     private String ownRights;
 }
 
