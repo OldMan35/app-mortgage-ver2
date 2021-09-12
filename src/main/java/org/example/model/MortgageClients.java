@@ -3,6 +3,7 @@ package org.example.model;
 
 import javax.validation.constraints.NotNull;
 import lombok.*;
+import org.example.validation.InnValidation;
 
 import javax.persistence.*;
 
@@ -56,12 +57,14 @@ public class MortgageClients {
     private String surnameOfSellers;
 
     @NotNull
+    @InnValidation
     private String innInd;
 
     @NotNull
     private String nameOrganization;
 
     @NotNull
+    @InnValidation
     private String innOrg;
 
     @NotNull
