@@ -7,12 +7,12 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-@Target({ElementType.METHOD, ElementType.FIELD})
+@Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
 @Constraint(validatedBy = InnValidationImpl.class)
 public @interface InnValidation {
 
-    String message() default "Некорректный ИНН";
+    String message() default "{org.example.validation.InnValidation.message}";
 
     Class<?>[] groups() default {};
 

@@ -14,13 +14,12 @@
     <jpa:repositories base-package="org.example.repository"
                       entity-manager-factory-ref="entityManagerFactoryBean"/>
     <mvc:annotation-driven validator="myBeansValidator"/>
-<!--    <bean id="myBeansValidator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean"/>-->
 
     <bean id="myBeansValidator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
         <property name="validationMessageSource" ref="messageSource"/>
     </bean>
     <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
-        <property name="basename" value="messages"/>
+        <property name="basename" value="ValidationMessages"/>
     </bean>
 
     <bean id="dataSource"
