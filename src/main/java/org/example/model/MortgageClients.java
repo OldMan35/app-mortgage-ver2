@@ -14,61 +14,62 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+//@Table(name = "mortgage")
 public class MortgageClients {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @NotNull //(message = "Поле обязательно для заполнения")
+    @NotNull
     private String nameOfBuyers;
 
-    @NotNull (message = "Поле обязательно для заполнения")
+    @NotNull
     private String patronymicOfBuyers;
 
-    @NotNull (message = "Поле обязательно для заполнения")
+    @NotNull
     private String surnameOfBuyers;
 
-    @NotNull(message = "Поле обязательно для заполнения")
+    @NotNull
     private String phoneNumberOfBuyers;
 
-    @NotNull(message = "Поле обязательно для заполнения")
+    @NotNull
     private long loanAmount;
 
-    @NotNull(message = "Поле обязательно для заполнения")
+    @NotNull
     private int loanTerm;
 
-    @NotNull(message = "Поле обязательно для заполнения")
+    @NotNull
     private String estateObject;
 
-    @NotNull(message = "Поле обязательно для заполнения")
+    @NotNull
     private long costObject;
 
-    @NotNull(message = "Поле обязательно для заполнения")
+    @NotNull
     @InnValidation
     private String innOfBuyers;
 
-    @NotNull(message = "Поле обязательно для заполнения")
+    @NotNull
     private String nameOfSellers;
 
-    @NotNull(message = "Поле обязательно для заполнения")
+    @NotNull
     private String patronymicOfSellers;
 
-    @NotNull(message = "Поле обязательно для заполнения")
+    @NotNull
     private String surnameOfSellers;
 
-    @NotNull(message = "Поле обязательно для заполнения")
+    @NotNull
     @InnValidation
     private String innInd;
 
-    @NotNull(message = "Поле обязательно для заполнения")
+    @NotNull
     private String nameOrganization;
 
-    @NotNull(message = "Поле обязательно для заполнения")
+    @NotNull
     @InnValidation
     private String innOrg;
 
-    @NotNull(message = "Поле обязательно для заполнения")
+    @NotNull
     private String ownRights;
 }
 

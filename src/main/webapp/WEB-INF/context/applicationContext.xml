@@ -11,6 +11,6 @@
     <import resource="dataContextDev.xml"/>
     <import resource="dataContextProd.xml"/>
     <import resource="restContext.xml"/>
-    <import resource="validationContext.xml"/>
+
 
 </beans>
