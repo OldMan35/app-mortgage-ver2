@@ -1,4 +1,4 @@
-create table mortgage(
+create table MORTGAGECLIENTS(
     id integer primary key auto_increment,
     nameOfBuyers varchar (255),
     patronymicOfBuyers varchar (255),
