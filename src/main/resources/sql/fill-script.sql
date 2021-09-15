@@ -1,2 +1,2 @@
 insert into MortgageClients (id, costObject, estateObject, innInd, innOfBuyers, innOrg, loanAmount, loanTerm, nameOfBuyers, nameOfSellers, nameOrganization, ownRights, patronymicOfBuyers, patronymicOfSellers, phoneNumberOfBuyers, surnameOfBuyers, surnameOfSellers)
-values (null, 300, "квартира", "502805064090", "502805064090", "3525422150", "23456000", 3, "Михаил", "Петр", "ООО Продажи прут", "Выписка из ЕГРН", "Михаилович", "Михайлович", 89876543322, "Михайлов", "Петров")
+values (null, 300, 'квартира', '502805064090', '502805064090', '3525422150', '23456000', 3, 'Михаил', 'Петр', 'ООО Продажи прут', 'Выписка из ЕГРН', 'Михаилович', 'Михайлович', 89876543322, 'Михайлов', 'Петров');
