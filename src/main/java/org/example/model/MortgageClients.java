@@ -1,6 +1,7 @@
 package org.example.model;
 
 
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import lombok.*;
 import org.example.validation.InnValidation;
@@ -21,6 +22,7 @@ public class MortgageClients {
     private int id;
 
     @NotNull
+    @NotBlank
     private String nameOfBuyers;
 
     @NotNull
